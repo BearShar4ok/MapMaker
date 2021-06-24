@@ -11,7 +11,13 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
+        <Grid Grid.Column="1" Name="ColorsChoice" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <Grid x:Name="column1" Grid.Column="0" ShowGridLines="True">
             <Grid.RowDefinitions>
                 <RowDefinition/>
