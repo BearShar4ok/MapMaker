@@ -41,8 +41,10 @@ namespace MapEditor
         private void ReadImage()
         {
             System.Drawing.Bitmap b = new System.Drawing.Bitmap(filename);
-            WriteLine(b.Palette.Entries.Length);
-            b.Palette.Entries.ToList().ForEach(x =>  System.Diagnostics.Debug.WriteLine($"R: {x.R}, G: {x.G}, B: {x.B}, A: {x.A}"));
+            //WriteLine(b.Palette.Entries.Length);
+            //b.Palette.Entries.ToList().ForEach(x =>  System.Diagnostics.Debug.WriteLine($"R: {x.R}, G: {x.G}, B: {x.B}, A: {x.A}"));
+            var color = b.GetPixel(50, 50);
+            Main.Background = new SolidColorBrush(Color.FromArgb(color.A, color.R, color.G, color.B));
             int imageWidth = bitmapImage.PixelWidth;
             int imageHeight = bitmapImage.PixelHeight;
             
