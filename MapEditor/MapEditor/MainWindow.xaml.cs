@@ -28,6 +28,7 @@ namespace MapEditor
         Image image = new Image();
         BitmapImage bitmapImage = new BitmapImage();
         private string filename;
+        private string filenameBrose;
         private List<Color> col = new List<Color>();
         public MainWindow()
         {
@@ -54,16 +55,23 @@ namespace MapEditor
         {
             OpenFileDialog dialog = new OpenFileDialog();
             Image im = new Image();
+            BitmapImage bit = new BitmapImage();
             dialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
             if (dialog.ShowDialog() == true)
             {
-                BitmapImage bit = new BitmapImage();
+                filenameBrose = dialog.FileName;
+                
                 bit.BeginInit();
                 bit.UriSource = new Uri(dialog.FileName);
                 bit.EndInit();
                 im.Source = bit;
             }
-
+            Rectangle r = new Rectangle();
+            r.Margin = new Thickness(30);
+            r.Fill = new ImageBrush(bit);
+            ColorsChoice.Children.Add(r);
+            Grid.SetRow(r, (sender as Button).Tag.ToString().ToInt());
+            Grid.SetColumn(r, 1);
 
         }
         private void ReadImage()
@@ -95,6 +103,7 @@ namespace MapEditor
                        
                         Button but = new Button();
                         but.Content = "Browse...";
+                        but.Tag = schet;
                         but.Margin = new Thickness(30, 10, 30, 10);
                         Grid.SetRow(but, schet);
                         Grid.SetColumn(but, 2);
@@ -104,7 +113,6 @@ namespace MapEditor
                     }
                 }
             }
-            int z = 0;
         }
         private void OpenImage()
         {
@@ -127,5 +135,6 @@ namespace MapEditor
     public static class Addition
     {
         public static void Print(this string text) => WriteLine(text);
+        public static int ToInt(this string input) => int.Parse(input);
     }
 }
