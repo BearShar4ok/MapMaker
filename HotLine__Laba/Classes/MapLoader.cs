@@ -26,7 +26,7 @@ namespace HotLine__Laba.Classes
         }
         public void LoadContent(ContentManager content)
         {
-           newMap=new Map( content.Load<Texture2D>(textureName),mappos);
+           newMap=new Map(mappos);
             texture=content.Load<Texture2D>("EnemyStay");
 
         }
@@ -35,7 +35,7 @@ namespace HotLine__Laba.Classes
             
             correctPos = position + pos;
             KeyboardState key = Keyboard.GetState();
-            if (boundBox.Intersects(bound) && key.IsKeyDown(Keys.E)) ;
+            if (boundBox.Intersects(bound) && key.IsKeyDown(Keys.E));
             {
                 newMap.OpenNow = true;
             }
@@ -45,9 +45,5 @@ namespace HotLine__Laba.Classes
         {
             brush.Draw(texture, correctPos, Color.White);
         }
-
-
-
-
     }
 }
