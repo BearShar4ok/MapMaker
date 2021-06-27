@@ -28,3 +28,6 @@ G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\ob
 G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\obj\Debug\MapEditor.csproj.CoreCompileInputs.cache
 G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\obj\Debug\MapEditor.exe
 G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\obj\Debug\MapEditor.pdb
+G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\bin\Debug\Newtonsoft.Json.dll
+G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\bin\Debug\Newtonsoft.Json.xml
+G:\PROGTIME\Программирование\C#2\MapMaker\MapEditor\MapEditor\obj\Debug\MapEditor.csproj.CopyComplete
