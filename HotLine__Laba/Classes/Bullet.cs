@@ -10,19 +10,21 @@ namespace HotLine__Laba.Classes
     class Bullet
     {
         private Texture2D texture;
-        private Rectangle rectangle;
+        public Rectangle rectangle;
         private Vector2 position;
         private int speed;
         double x;
         double y;
         float rotation;
         int animeStop;
+        public Rectangle bound;
        
         public Bullet(Vector2 pos, float rot,int X,int Y)
         {
             speed = 24;
             position = pos;
             rectangle = new Rectangle(0, 0, 48, 48);
+            bound= new Rectangle((int)pos.X, (int)pos.Y, 48, 48);
             texture = null;
             rotation = rot-(float)(Math.PI*1.5);
             x = X-position.X;
@@ -44,7 +46,8 @@ namespace HotLine__Laba.Classes
         public void Update( )
         {
 
-           
+            bound.X = (int)position.X;
+            bound.Y = (int)position.Y;
             if (animeStop<=0)
             {
                 position.X += (int)x*2;

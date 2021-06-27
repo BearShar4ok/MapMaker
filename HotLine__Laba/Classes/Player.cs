@@ -29,11 +29,11 @@ namespace HotLine__Laba.Classes
         private int speed;
         private Vector napravlenie;
         int interval;
-        private PlayerStatus status;
-        private int interval1;
+        public PlayerStatus status;
+        
         private Texture2D stay;
         private Vector2 origin2;
-        private int currentFrame;
+        public int currentFrame;
         private int spriteWidth;
         private int spriteHeight;
         private int spriteWidth2;
@@ -45,7 +45,7 @@ namespace HotLine__Laba.Classes
         private int spriteWidth1;
         private int spriteHeight1;
         private float rotation;
-        private int health;
+        public int health;
         bool isUp = false;
         bool isDown = false;
         bool isLeft = false;
@@ -54,7 +54,7 @@ namespace HotLine__Laba.Classes
         private bool freecam;
         Texture2D shoot;
         ContentManager manager;
-        List<Bullet> bullets = new List<Bullet>();
+        public List<Bullet> bullets = new List<Bullet>();
         public Rectangle SourceRectangle {
             get 
             {
@@ -68,10 +68,16 @@ namespace HotLine__Laba.Classes
                 return position;
             }
         }
+        public Rectangle Bound
+        {
+            get;
+            set;
+        }
       
      
         public Player(Vector2 pos)
         {
+            health = 2;
             napravlenie = Vector.righ;
             texture = null;
             texture2 = null;
@@ -97,7 +103,8 @@ namespace HotLine__Laba.Classes
             rotation = 0f;
             rightOrLeft = true;
             interval = 0;
-            numOfDieTexture = 32;
+            Bound = new Rectangle((int)position.X, (int)position.Y, 50, 50);
+            numOfPatrons = 32;
 
         }
         public void LoadContent(ContentManager content)
@@ -174,11 +181,7 @@ namespace HotLine__Laba.Classes
             {
                 item.Draw(brushe);
             }
-            if (bullets.Count>0)
-            {
-                int z = 0;
-
-            }
+           
 
         }
         public Vector2 Update()
@@ -219,7 +222,7 @@ namespace HotLine__Laba.Classes
                                 Bullet b = new Bullet(position, rotation, mouse.X, mouse.Y);
                                 b.LoadContent(manager);
                                 bullets.Add(b);
-
+                                numOfPatrons--;
                             }
                             animeitPause = 5;
                         }
@@ -318,7 +321,7 @@ namespace HotLine__Laba.Classes
                             currentFrame = 0;
 
                         }
-                        if (keyboardState.IsKeyDown(Keys.E) && interval <= 0)
+                        if (keyboardState.IsKeyDown(Keys.E) && interval <= 0 && numOfPatrons > 0)
                         {
                             status = PlayerStatus.shoot;
                             currentFrame = 0;
@@ -459,7 +462,7 @@ namespace HotLine__Laba.Classes
                         if (currentFrame < 5)
                         {
                             currentFrame++;
-
+                            
                         }
                         else
                         {
