@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/bathit.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/die1.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/die2.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/EnemyDie1.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/EnemyDie2.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/enemyHit.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/EnemyLeft.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/EnemyRight.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/EnemyStay.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/left.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/right.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/right2.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/Shoot.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/splBullet_0.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/Stay_Player.png</File>
+    <File>C:/Users/admin/source/repos/HotLine__Laba/HotLine__Laba/Content/unknown.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
